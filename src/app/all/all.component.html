@@ -1,0 +1,12 @@
+<div *ngFor="let items of all; let i =index" id="todos-active">
+  <section class="example-section">
+    <div  class="check">
+      <p class="checkbox-p">
+        <mat-checkbox (click)="Toggle(i)" class="{{ items.completed ? 'done' : '' }}">
+          {{items.content }}</mat-checkbox>
+      </p>
+      
+        <button (click)="Remove(i)" class="remove"><fa-icon [icon]="faTrash"></fa-icon></button>
+      </div>
+  </section>
+</div>
